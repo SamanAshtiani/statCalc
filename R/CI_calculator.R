@@ -15,7 +15,7 @@
 my_CI_lower <- function(value, sd, prob=0.95) {
   two_tail_prob <- 1 - ((1-prob)/2)
   ci_lower <- value - (qnorm(two_tail_prob, mean=0, sd=1,lower.tail = TRUE)*sd)
-
+  return(ci_lower)
 }
 
 #' Upper CI function
@@ -34,8 +34,8 @@ my_CI_lower <- function(value, sd, prob=0.95) {
 
 my_CI_upper <- function(value, sd, prob=0.95) {
   two_tail_prob <- 1 - ((1-prob)/2)
-  ci_upper <- value - (qnorm(two_tail_prob, mean=0, sd=1,lower.tail = TRUE)*sd)
-
+  ci_upper <- value - (qnorm(two_tail_prob, mean=0, sd=1,lower.tail = FALSE)*sd)
+  return(ci_upper)
 }
 
 
