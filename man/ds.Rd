@@ -6,6 +6,9 @@
 \usage{
 ds(x)
 }
+\arguments{
+\item{x}{numerical variable}
+}
 \description{
 Creates histogram, boxplots and numeric summary
 }
